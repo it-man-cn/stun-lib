@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - tip
+  - 1.5.3
+
+install:
+  - go get -u github.com/golang/lint/golint
+  
+script:
+  - $HOME/gopath/bin/golint ./...
+  - go test -v ./...
